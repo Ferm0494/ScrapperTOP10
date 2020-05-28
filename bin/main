@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
-require 'nokogiri'
-require 'open-uri'
 require_relative '../lib/games.rb'
+require_relative '../lib/web.rb'
 require_relative '../lib/game.rb'
 
 games = Games.new
-doc = Nokogiri::HTML(URI.open('https://www.stuff.tv/top-10/playstation-4-games'))
-doc.css('div.field-item.even article', 'div.field-item.odd article').each do |link|
+# doc = Nokogiri::HTML(URI.open('https://www.stuff.tv/top-10/playstation-4-games'))
+page = Web.new('https://www.stuff.tv/top-10/playstation-4-games')
+page.doc.css('div.field-item.even article', 'div.field-item.odd article').each do |link|
     game= Game.new(link)
     games.push(game);
 end
