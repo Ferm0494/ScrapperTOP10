@@ -11,4 +11,4 @@ page.doc.css('div.field-item.even article', 'div.field-item.odd article').each d
     games.push(game);
 end
 
-puts games.get_data
+ puts games.get_data
