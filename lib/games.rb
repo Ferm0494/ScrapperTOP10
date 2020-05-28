@@ -15,9 +15,10 @@ class Games
   end
 
   def push(object)
-    if object.is_a?(Object)
+    if object.is_a?(Game)
       @games[@count] = object
       @count += 1
+      true
     else
       false
     end

@@ -32,7 +32,7 @@ class Game
     elems[0]
   end
 
-  def rating(star5, star4)
+  def rating(star5 = '', star4 = '')
     if !star5.empty?
       5
     elsif !star4.empty?
