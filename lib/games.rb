@@ -1,5 +1,5 @@
 require 'yaml'
-class Games
+class GamesLib
   attr_reader :games
   def initialize()
     @games = []

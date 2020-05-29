@@ -16,6 +16,13 @@
 - Navigate to the `bin` folder.
 - Run command `ruby main`
 
+## Getting started for testing
+
+- For testing make sure you are on `capstone` folder and run command `rspec`.
+- Test cases for each class are on `spec` folder.
+- Test cases were made for `games` and `game` classes methods.
+
+
 
 ## Authors
 
