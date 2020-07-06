@@ -1,3 +1,13 @@
 #!/usr/bin/env ruby
-require 'nokogiri'
-require 'open-uri'
+require_relative '../lib/games.rb'
+require_relative '../lib/web.rb'
+require_relative '../lib/game.rb'
+
+lib_games = GamesLib.new
+page = Web.new('https://www.stuff.tv/top-10/playstation-4-games')
+page.doc.css('div.field-item.even article', 'div.field-item.odd article').each do |link|
+  game = Game.new(link)
+  lib_games.push(game)
+end
+
+puts lib_games.data
